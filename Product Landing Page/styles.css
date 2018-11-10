@@ -1,0 +1,159 @@
+#body-container {
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      ". main ."
+      "footer footer footer";
+    
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 80px auto 100px;
+    margin: 0px;
+    background-color: #FFFAED;
+    color: #3b3b29;
+    font-family: 'Righteous', cursive;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+      "logo brand . nav .";
+    background-color: #F2E8CD;
+  }
+  @media (min-width: 975px){
+    header{
+      grid-template-columns: 125px auto 1fr 3fr 100px;  
+    }
+    .nav-link{
+      margin: 15px;
+    }
+  }
+  @media (max-width: 974px){
+    header{
+      grid-template-columns: 100px auto 1fr 3fr 10px;
+    }
+    .nav-link{
+      margin: 15px 5px;
+    }
+  }
+  h2{
+    font-size: 3em;
+  }
+  h4{
+    font-size: 1.5em;
+  }
+  #header-img {
+    grid-area: logo;
+    width: auto;
+    height: 100%;
+    margin: 0px 25px;
+  }
+  #header-brand-text{
+    grid-area: brand;
+    align-self: center;
+    font-size: 44px;
+  }
+  #nav-bar {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-link{
+    color: #3b3b29; 
+    min-width: 100px;
+    font-size: 22px;
+  }
+  
+  main {
+    grid-area: main;
+    justify-self: center;
+    display: grid;
+    grid-template-areas: 
+      "coffee"
+      "shop"
+      "signup";
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto auto;
+  }
+  #main-coffee {
+    grid-area: coffee;
+    justify-self: center;
+  }
+  
+  #main-signup{
+    grid-area: signup;
+    justify-self: center;
+  }
+  #main-shop{
+    grid-area: shop;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .coffeeBox{
+    width: 200px;
+    margin-left: 50px;  
+    margin-right: 50px;  
+    background-color: #F2E8CD;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+  }
+  .shop-coffee-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+  }
+  .shop-coffee-header{
+    font-size: 1.5em;
+    text-align:center;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  .shop-coffee-content{
+    font-size: 0.8em;
+    justify-self: center;
+  }
+  #form{
+    align-content:center;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "label input"
+      "submit submit"
+  }
+  #email-label{
+    text-align:center;
+    justify-self: end;
+    align-self: center;
+    padding: 5px;
+    margin: 3px;
+    grid-area: label;
+    font-size: 1.3em;
+  }
+  #email{
+    grid-area: input;
+    height: 2.5em;
+    border-radius: 3px;
+    margin: 5px;
+  }
+  #submit{
+    grid-area: submit;   
+    height: 2.5em;
+    border-radius: 3px;
+    margin: 5px;
+    font-family: 'Righteous', cursive;
+    background-color: #F2E8CD;
+    color: #3b3b29;
+    font-size: 1.3em;
+    
+  }
+  footer {
+    grid-area: footer;
+  }
